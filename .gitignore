@@ -8,4 +8,4 @@ bin/
 obj/
 /.vs
 *.sln
-packages/*
+/packages
