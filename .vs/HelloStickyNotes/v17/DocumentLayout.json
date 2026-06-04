@@ -3,18 +3,42 @@
   "WorkspaceRootPath": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|HelloStickyNotes||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|HelloStickyNotes||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\themeresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:themeresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\viewmodels\\noteitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:viewmodels\\noteitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\controls\\titlecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:controls\\titlecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\controls\\titlecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\controls\\titlecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:controls\\titlecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -22,27 +46,15 @@
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:controls\\notelistcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\controls\\notelistcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\controls\\notelistcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:controls\\notelistcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\themeresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:themeresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\misc\\mystorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\misc\\mystorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:misc\\mystorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -52,10 +64,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\notewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:notewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\viewmodels\\noteitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:viewmodels\\noteitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -72,7 +80,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -80,19 +88,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HelloStickyNotes",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\HelloStickyNotes.csproj",
-              "RelativeDocumentMoniker": "HelloStickyNotes.csproj",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\HelloStickyNotes.csproj",
-              "RelativeToolTip": "HelloStickyNotes.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-04T10:29:11.225Z",
+              "DocumentIndex": 2,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-06-04T10:46:22.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T10:46:11.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -104,19 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NoteListControl.xaml",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml",
-              "RelativeDocumentMoniker": "Controls\\NoteListControl.xaml",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml",
-              "RelativeToolTip": "Controls\\NoteListControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-04T10:14:16.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -128,33 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NoteListControl.xaml.cs",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml.cs",
-              "RelativeDocumentMoniker": "Controls\\NoteListControl.xaml.cs",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml.cs",
-              "RelativeToolTip": "Controls\\NoteListControl.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:08:43.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TitleControl.xaml.cs",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\TitleControl.xaml.cs",
-              "RelativeDocumentMoniker": "Controls\\TitleControl.xaml.cs",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\TitleControl.xaml.cs",
-              "RelativeToolTip": "Controls\\TitleControl.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:09:55.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "TitleControl.xaml",
               "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\TitleControl.xaml",
               "RelativeDocumentMoniker": "Controls\\TitleControl.xaml",
@@ -166,7 +150,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "HelloStickyNotes",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\HelloStickyNotes.csproj",
+              "RelativeDocumentMoniker": "HelloStickyNotes.csproj",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\HelloStickyNotes.csproj",
+              "RelativeToolTip": "HelloStickyNotes.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T10:29:11.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThemeResources.xaml",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\ThemeResources.xaml",
+              "RelativeDocumentMoniker": "ThemeResources.xaml",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\ThemeResources.xaml",
+              "RelativeToolTip": "ThemeResources.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-04T10:16:28.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TitleControl.xaml.cs",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\TitleControl.xaml.cs",
+              "RelativeDocumentMoniker": "Controls\\TitleControl.xaml.cs",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\TitleControl.xaml.cs",
+              "RelativeToolTip": "Controls\\TitleControl.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T10:09:55.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NoteListControl.xaml.cs",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml.cs",
+              "RelativeDocumentMoniker": "Controls\\NoteListControl.xaml.cs",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml.cs",
+              "RelativeToolTip": "Controls\\NoteListControl.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T10:08:43.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -179,70 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:17:49.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ThemeResources.xaml",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\ThemeResources.xaml",
-              "RelativeDocumentMoniker": "ThemeResources.xaml",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\ThemeResources.xaml",
-              "RelativeToolTip": "ThemeResources.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-04T10:16:28.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MyStorage.cs",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Misc\\MyStorage.cs",
-              "RelativeDocumentMoniker": "Misc\\MyStorage.cs",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Misc\\MyStorage.cs",
-              "RelativeToolTip": "Misc\\MyStorage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:14:56.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NoteWindow.xaml",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml",
-              "RelativeDocumentMoniker": "NoteWindow.xaml",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml",
-              "RelativeToolTip": "NoteWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-04T10:06:18.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "NoteWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml.cs",
-              "RelativeDocumentMoniker": "NoteWindow.xaml.cs",
-              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml.cs",
-              "RelativeToolTip": "NoteWindow.xaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAmwEAAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:04:30.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "NoteItemViewModel.cs",
               "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\ViewModels\\NoteItemViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\NoteItemViewModel.cs",
@@ -255,7 +224,66 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NoteListControl.xaml",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml",
+              "RelativeDocumentMoniker": "Controls\\NoteListControl.xaml",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Controls\\NoteListControl.xaml",
+              "RelativeToolTip": "Controls\\NoteListControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-04T10:14:16.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T10:17:49.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MyStorage.cs",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Misc\\MyStorage.cs",
+              "RelativeDocumentMoniker": "Misc\\MyStorage.cs",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Misc\\MyStorage.cs",
+              "RelativeToolTip": "Misc\\MyStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T10:14:56.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NoteWindow.xaml",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml",
+              "RelativeDocumentMoniker": "NoteWindow.xaml",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml",
+              "RelativeToolTip": "NoteWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-04T10:06:18.401Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "NoteWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml.cs",
+              "RelativeDocumentMoniker": "NoteWindow.xaml.cs",
+              "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\NoteWindow.xaml.cs",
+              "RelativeToolTip": "NoteWindow.xaml.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwEAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T10:04:30.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "App.config",
               "DocumentMoniker": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\App.config",
               "RelativeDocumentMoniker": "App.config",
