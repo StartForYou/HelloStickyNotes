@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:notewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|d:\\always\\myproject\\windows projects\\wpf project\\hellostickynotes\\utils\\randomutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\utils\\randomutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A5F1082-F125-46E8-8A49-F8E65B73193C}|HelloStickyNotes.csproj|solutionrelative:utils\\randomutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -106,8 +106,7 @@
               "RelativeToolTip": "Utils\\RandomUtils.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T11:03:58.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T11:03:58.766Z"
             },
             {
               "$type": "Document",
@@ -117,7 +116,7 @@
               "RelativeDocumentMoniker": "Utils\\NoteCommands.cs",
               "ToolTip": "D:\\Always\\MyProject\\Windows Projects\\WPF Project\\HelloStickyNotes\\Utils\\NoteCommands.cs",
               "RelativeToolTip": "Utils\\NoteCommands.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-04T11:00:28.803Z",
               "EditorCaption": ""
@@ -132,8 +131,7 @@
               "RelativeToolTip": "packages.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-06-04T10:46:22.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T10:46:22.343Z"
             },
             {
               "$type": "Document",
@@ -168,8 +166,7 @@
               "RelativeToolTip": "NoteWindow.xaml.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAYwCAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:04:30.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T10:04:30.962Z"
             },
             {
               "$type": "Document",
@@ -181,8 +178,7 @@
               "RelativeToolTip": "ViewModels\\NoteItemViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T10:10:58.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T10:10:58.582Z"
             },
             {
               "$type": "Document",
