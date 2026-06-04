@@ -64,6 +64,10 @@ namespace HelloStickyNotes.Utils
                         }
                     }
                     break;
+                case "checkUpdate":
+                    string api = "https://api.github.com/repos/StartForYou/HelloStickyNotes/releases/latest";
+                    result = api;
+                    break;
             }
             return result;
         }
