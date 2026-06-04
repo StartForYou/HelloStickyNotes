@@ -1,2 +1,6 @@
 # HelloStickyNotes
 Hello StickyNotes: Sticky notes for your windows desktop
+
+使用WPF设计的一款便签软件，可以将便签“粘”在桌面上，现已实现了基础的功能
+单文件打包所使用插件：Fody、Costura.Fody
+.Net框架版本：.Net Framework8.0
