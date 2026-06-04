@@ -1,4 +1,8 @@
-﻿/HelloStickyNotes.csproj
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/HelloStickyNotes.csproj
 /HelloStickyNotes.csproj.user
 bin/
 obj/
