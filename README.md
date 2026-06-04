@@ -2,6 +2,8 @@
 
 Hello StickyNotes: Sticky notes for your windows desktop
 
+![.NET](https://img.shields.io/badge/.NET-4.8-blue) ![WPF](https://img.shields.io/badge/WPF-Desktop-green) 
+
 
 
 
