@@ -2,7 +2,7 @@
 
 Hello StickyNotes: Sticky notes for your windows desktop
 
-<<<<<<< HEAD
+
 
 
 使用WPF设计的一款便签软件，可以将便签“粘”在桌面上，现已实现了基础的功能
@@ -13,11 +13,11 @@ Hello StickyNotes: Sticky notes for your windows desktop
 
 
 
-![主窗口](Assets\Screenshots\Snipaste_2026-06-04_22-00-02.png)
+![主窗口](Assets/Screenshots/Snipaste_2026-06-04_22-00-02.png)
 
 
 
-![便签](Assets\Screenshots\Snipaste_2026-06-04_22-00-50.png)
+![便签](Assets/Screenshots/Snipaste_2026-06-04_22-00-50.png)
 
 
 
