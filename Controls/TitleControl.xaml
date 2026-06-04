@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="HelloStickyNotes.Controls.TitleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ic="using:FluentIcons.WinUI"
+             xmlns:local="clr-namespace:HelloStickyNotes"
+             mc:Ignorable="d">
+
+    <DockPanel Margin="0,0,0,10">
+        <Button DockPanel.Dock="Right"
+                Click="Button_Close"
+                Style="{StaticResource IconButton}"
+                Content="&#xE8BB;" FontFamily="Segoe Fluent Icons">
+            <!--&#xE8BB;
+            &#xE700;
+            &#xE713;-->
+        </Button>
+        
+        <Button DockPanel.Dock="Right"
+            Click="Button_ToggleOptions"
+            Style="{StaticResource IconButton}"
+            Content="&#xE700;" FontFamily="Segoe Fluent Icons">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="OptionsMenu">
+                    <MenuItem Header="Theme Color">
+                        <ItemsControl ItemsSource="{Binding AvailableColors}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Horizontal" Width="140"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Background="{Binding}"
+                                            
+                                            Command="{Binding DataContext.SetThemeColorCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                            CommandParameter="{Binding}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </MenuItem>
+                    <MenuItem Header="Notification Tone">
+                        <ItemsControl ItemsSource="{Binding AvailableTones}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton Content="{Binding}"
+                                                 GroupName="NotificationTone"
+                                                 Command="{Binding DataContext.SetNotificationToneCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                 CommandParameter="{Binding}"
+                                                 Margin="4,2">
+                                        <RadioButton.IsChecked>
+                                            <MultiBinding Mode="OneWay">
+                                                <Binding Path="DataContext.SelectedNotificationTone" RelativeSource="{RelativeSource AncestorType=ContextMenu}"/>
+                                                <Binding Path="."/>
+                                            </MultiBinding>
+                                        </RadioButton.IsChecked>
+                                    </RadioButton>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </MenuItem>
+                    <MenuItem Header="Default Countdown">
+                        <ItemsControl ItemsSource="{Binding AvailableDefaultCountdowns}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton Content="{Binding DisplayName}"
+                                                 GroupName="DefaultCountdown"
+                                                 Command="{Binding DataContext.SetDefaultCountdownCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}"
+                                                 CommandParameter="{Binding}"
+                                                 Margin="4,2">
+                                        <RadioButton.IsChecked>
+                                            <MultiBinding Mode="OneWay">
+                                                <Binding Path="DataContext.SelectedDefaultCountdown" RelativeSource="{RelativeSource AncestorType=ContextMenu}"/>
+                                                <Binding Path="."/>
+                                            </MultiBinding>
+                                        </RadioButton.IsChecked>
+                                    </RadioButton>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="将此窗口置顶" 
+                              IsCheckable="True" 
+                              IsChecked="{Binding IsAlwaysOnTop, Mode=OneWay}"
+                              Command="{Binding ToggleAlwaysOnTopCommand}"/>
+                    <MenuItem Header="关闭所有便签" Command="{Binding CloseAllWindowsCommand}"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+        
+        
+        <TextBlock Text="Hello Sticky Notes!" FontSize="15" Margin="0, 4" FontWeight="Bold" Name="Title"></TextBlock>
+    </DockPanel>
+    
+</UserControl>
