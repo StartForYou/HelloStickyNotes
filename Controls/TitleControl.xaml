@@ -23,7 +23,7 @@
             Content="&#xE700;" FontFamily="Segoe Fluent Icons">
             <Button.ContextMenu>
                 <ContextMenu x:Name="OptionsMenu">
-                    <MenuItem Header="Theme Color">
+                    <!--<MenuItem Header="Theme Color">
                         <ItemsControl ItemsSource="{Binding AvailableColors}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -80,7 +80,7 @@
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </MenuItem>
-                    <Separator/>
+                    <Separator/>-->
                     <MenuItem Header="将此窗口置顶" 
                               IsCheckable="True" 
                               IsChecked="{Binding IsAlwaysOnTop, Mode=OneWay}"

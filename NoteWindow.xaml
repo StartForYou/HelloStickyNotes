@@ -11,7 +11,8 @@
         ResizeMode="CanResize"
         AllowsTransparency="True"
         Background="Transparent"
-        >
+        MinWidth="200" MinHeight="200"
+        MaxWidth="1080" MaxHeight="720">
 
     <WindowChrome.WindowChrome>
         <WindowChrome CornerRadius="0" GlassFrameThickness="1" CaptionHeight="0" ResizeBorderThickness="6"/>
