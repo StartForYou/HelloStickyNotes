@@ -26,7 +26,12 @@ namespace HelloStickyNotes
                     Window.GetWindow(this)?.Close();
                     break;
                 case Key.Tab:
-                    switch (InputView.Text)
+                    string result = NoteCommands.OnCommit(InputView.Text, this);
+                    if (result != null)
+                    {
+                        InputView.Text = result;
+                    }
+                    /*switch (InputView.Text)
                     {
                         case "pwd":
                             String pwd = RandomUtils.RandomLABCode4("2026-06-02");
@@ -75,7 +80,7 @@ namespace HelloStickyNotes
                                 }
                             }
                             break;
-                    }
+                    }*/
                     break;
             }
         }
