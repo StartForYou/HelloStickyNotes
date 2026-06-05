@@ -81,14 +81,34 @@
         </Setter>
     </Style>
 
-    <Style x:Key="NoteItem" TargetType="Border">
+    <Style x:Key="PopupButton" TargetType="Button">
+        <Setter Property="Height" Value="28"/>
+        <Setter Property="BorderBrush" Value="#40C97B47"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Transparent" BorderThickness="0" CornerRadius="0">
+                        <Border x:Name="Overlay" Background="Transparent" CornerRadius="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger  Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Overlay" Property="Background" Value="#40F9AB77"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PopupBorder" TargetType="Border">
+        <Setter Property="Background" Value="#EB966251"/>
+        
         <Setter Property="CornerRadius" Value="8"/>
-        <Setter Property="Padding" Value="8"/>
-        <Setter Property="Margin" Value="0, 0, 8, 8"/>
-        <Setter Property="Background" Value="#FAEBD7"/>
-        <Setter Property="BorderBrush" Value="#55020403" />
-        <Setter Property="BorderThickness" Value="1" />
-        <!--<Setter Property="Effect">
+        <Setter Property="Effect">
             <Setter.Value>
                 <DropShadowEffect
                     BlurRadius="2"
@@ -96,7 +116,31 @@
                     ShadowDepth="1"
                     Color="OrangeRed" />
             </Setter.Value>
-        </Setter>-->
+        </Setter>
+        <!--<Setter Property="Effect" Value="{StaticResource ShadowEffect}"/> 不可用！-->
+        <!--Background="White" BorderBrush="DarkSlateGray" BorderThickness="1" CornerRadius="8"-->
+    </Style>
+
+
+    <!-- ======================= -->
+    <!-- NoteItem Style        -->
+    <!-- ======================= -->
+    <Style x:Key="NoteItem" TargetType="Border">
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="Margin" Value="0, 0, 8, 8"/>
+        <Setter Property="Background" Value="#FAEBD7"/>
+        <Setter Property="BorderBrush" Value="#55020403" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect
+                    BlurRadius="2"
+                    Opacity="0.3"
+                    ShadowDepth="1"
+                    Color="OrangeRed" />
+            </Setter.Value>
+        </Setter>
 
         <Style.Triggers>
             <!--<Trigger Property="IsMouseOver" Value="True">
@@ -216,5 +260,8 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <DropShadowEffect x:Key="ShadowEffect" BlurRadius="10" ShadowDepth="3" 
+                      Opacity="0.3" Color="Black"/>
 
 </ResourceDictionary>

@@ -4,38 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" >
-    <ScrollViewer VerticalScrollBarVisibility="Visible" Style="{StaticResource ModernScrollViewer}">
 
-        <ItemsControl ItemsSource="{Binding NoteList}">
-            
-            <!--setting layout view-->
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            
-            <!--setting child views-->
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Border Style="{StaticResource NoteItem}" Width="130" Height="94"
+    <Grid>
+
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Style="{StaticResource ModernScrollViewer}">
+            <ItemsControl ItemsSource="{Binding NoteList}">
+
+                <!--setting layout view-->
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <!--setting child views-->
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource NoteItem}" Width="130" Height="94"
                             MouseDown="Border_MouseDown" MouseUp="Border_MouseUp">
-                        <StackPanel>
-                            <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+                            <StackPanel>
+                                <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
                                 Background="Transparent"
                                 BorderThickness="0"
                                 FontWeight="SemiBold"
                                 FontSize="14"/>
-                            <Border Background="Gray" Margin="0, 2" Height="1"/>
-                            <TextBlock Text="{Binding Content}"
+                                <Border Background="Gray" Margin="0, 2" Height="1"/>
+                                <TextBlock Text="{Binding Content}"
                                 FontSize="14"
                                 TextWrapping="Wrap"/>
-                            <!--FontFamily="Consolas"-->
-                            <!--<RepeatButton Content="openNote" Command="{Binding ItemClickCommand}"></RepeatButton>-->
-                        </StackPanel>
-                    </Border>
-                    
-                    <!--<Border Background="WhiteSmoke">
+                                <!--FontFamily="Consolas"-->
+                                <!--<RepeatButton Content="openNote" Command="{Binding ItemClickCommand}"></RepeatButton>-->
+                            </StackPanel>
+                        </Border>
+
+                        <!--<Border Background="WhiteSmoke">
                         <DockPanel>
                             <Button DockPanel.Dock="Right"
                                 Style="{StaticResource IconButton}"
@@ -45,8 +47,19 @@
 
                         </DockPanel>
                     </Border>-->
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-    </ScrollViewer>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <Popup x:Name="myPopup" Placement="MousePoint" StaysOpen="False" AllowsTransparency="True" PopupAnimation="Fade">
+            <Border Style="{StaticResource PopupBorder}">
+                <StackPanel Width="120" Margin="0, 8">
+                    <Button Content="删除" Style="{StaticResource PopupButton}" Click="PopupDelete_Click"/>
+                    <Button Content="取消" Style="{StaticResource PopupButton}" Click="PopupCancel_Click"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+
+    </Grid>
 </UserControl>

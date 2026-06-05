@@ -11,7 +11,7 @@
         ResizeMode="CanResize"
         AllowsTransparency="True"
         Background="Transparent"
-        MinWidth="200" MinHeight="200"
+        MinWidth="80" MinHeight="52"
         MaxWidth="1080" MaxHeight="720">
 
     <WindowChrome.WindowChrome>

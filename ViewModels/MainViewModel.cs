@@ -30,6 +30,7 @@ namespace HelloStickyNotes.ViewModels
         private string _debugText = "";
 
         private bool isContentChanged = false;
+        private NoteItemViewModel lastRightClickNote = null;
 
         public ObservableCollection<NoteItemViewModel> NoteList { get; set; } = new ObservableCollection<NoteItemViewModel>();
 
@@ -97,6 +98,16 @@ namespace HelloStickyNotes.ViewModels
             //DebugText = "已尝试添加新的便签! 现在已有" + count + "个";
             DebugText = "已尝试删除便签: " + (noteItem.Title != null ? noteItem.Title : "无标题");
             isContentChanged = true;
+        }
+
+        public void SetLastRightClickNote(NoteItemViewModel noteViewModel)
+        {
+            lastRightClickNote = noteViewModel;
+        }
+
+        public NoteItemViewModel GetLastRightClickNote()
+        {
+            return lastRightClickNote;
         }
 
         [RelayCommand]

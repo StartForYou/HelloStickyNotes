@@ -1,4 +1,5 @@
 ﻿using HelloStickyNotes.ViewModels;
+using Microsoft.Win32;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,7 +43,7 @@ namespace HelloStickyNotes.Controls
                     {
                         if (selfModel.CanNoteItemClick())
                         {
-                            OnItemClick(sender, selfModel);
+                            OnItemLeftClick(sender, selfModel);
                         }
                     }
                 }
@@ -54,8 +55,7 @@ namespace HelloStickyNotes.Controls
                     {
                         if (selfModel.CanNoteItemClick())
                         {
-                            MainViewModel mainViewModel = GetMainViewModel();
-                            mainViewModel?.RemoveNote(selfModel);
+                            OnItemRightClick(sender, selfModel);
                             //selfModel.RemoveSelf();
                             //OnItemClick(sender, selfModel);
                         }
@@ -66,7 +66,7 @@ namespace HelloStickyNotes.Controls
             this.itemMouseDownBorder = null;
         }
 
-        private void OnItemClick(object sender, NoteItemViewModel item)
+        private void OnItemLeftClick(object sender, NoteItemViewModel item)
         {
             try
             {
@@ -102,6 +102,25 @@ namespace HelloStickyNotes.Controls
             }
         }
 
+        private void OnItemRightClick(object sender, NoteItemViewModel item)
+        {
+            try
+            {
+                //MessageBoxButton boxButton = MessageBoxButton.YesNo;
+                //MessageBoxResult messageResult = MessageBox.Show("Hello world!", "caption", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+                /*MainViewModel mainViewModel = GetMainViewModel();
+                mainViewModel?.RemoveNote(item);*/
+                MainViewModel mainViewModel = GetMainViewModel();
+                mainViewModel?.SetLastRightClickNote(item);
+                myPopup.IsOpen = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw;
+            }
+        }
+
         private MainViewModel GetMainViewModel()
         {
             if (Application.Current.MainWindow is MainWindow mainView && mainView is MainWindow mainWindow)
@@ -113,5 +132,18 @@ namespace HelloStickyNotes.Controls
             }
             return null;
         }
+
+        private void PopupDelete_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+            MainViewModel mainViewModel = GetMainViewModel();
+            mainViewModel?.RemoveNote(mainViewModel.GetLastRightClickNote());
+        }
+
+        private void PopupCancel_Click(object sender, RoutedEventArgs e)
+        {
+            myPopup.IsOpen = false;
+        }
+        
     }
 }
