@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloStickyNotes"
         mc:Ignorable="d"
-        Title="NoteWindow" Height="180" Width="280"
+        Title="NoteWindow" Height="160" Width="240"
         WindowStyle="None"
         ShowInTaskbar="False"
         ResizeMode="CanResize"
