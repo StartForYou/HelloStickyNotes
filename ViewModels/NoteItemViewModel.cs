@@ -12,6 +12,8 @@ namespace HelloStickyNotes.ViewModels
         private long lastDownTime = 0;
 
         private bool isChanged = false;
+        private int waitSeconds = 0;
+        private string noticeTitle = null;
 
         public string Id { get => Model.Id; }
         public string Title { get => Model.Title;
@@ -37,6 +39,39 @@ namespace HelloStickyNotes.ViewModels
                     OnPropertyChanged();
                 }
             }
+        }
+
+        public bool Topmost
+        {
+            get => Model.Topmost;
+            set
+            {
+                if (Model.Topmost != value)
+                {
+                    Model.Topmost = value;
+                    NoteChanged();
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public int WaitSeconds
+        {
+            get => waitSeconds;
+            set
+            {
+                if (waitSeconds != value)
+                {
+                    waitSeconds = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public string NoticeTitle
+        {
+            get => noticeTitle;
+            set => noticeTitle = value;
         }
 
         // 主窗口中item按下时
@@ -83,6 +118,24 @@ namespace HelloStickyNotes.ViewModels
 
         public void Tick()
         {
+            if (WaitSeconds> 0)
+            {
+                WaitSeconds--;
+                if (WaitSeconds <= 0)
+                {
+                    NoticeTitle = "倒计时结束";
+                }
+                Content = "剩余时间: " + (WaitSeconds / 60) + ":";
+                int second = WaitSeconds % 60;
+                if (second< 10)
+                {
+                    Content += "0"+ second;
+                }
+                else
+                {
+                    Content += second.ToString();
+                }
+            }
             //OnPropertyChanged(Content);
         }
 

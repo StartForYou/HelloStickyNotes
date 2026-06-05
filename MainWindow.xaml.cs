@@ -15,7 +15,7 @@ namespace HelloStickyNotes
     {
 
         private MainViewModel mViewModel;
-        private readonly DispatcherTimer mTimer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(5) };
+        private readonly DispatcherTimer mTimer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(1) };
 
         private bool isExiting = false;
         private bool tipMininuzedToTray = false;
@@ -38,6 +38,14 @@ namespace HelloStickyNotes
         private void MTimer_Tick(object sender, EventArgs e)
         {
             this.mViewModel.Tick();
+            if (this.mViewModel.NeedNotice())
+            {
+                foreach (var item in this.mViewModel.GetNoticeItems())
+                {
+                    TrayIcon.ShowBalloonTip(item.NoticeTitle, item.NoteItem.Title, BalloonIcon.None);
+                }
+                this.mViewModel.GetNoticeItems().Clear();
+            }
         }
 
         private void OnClosing(object sender, CancelEventArgs e)

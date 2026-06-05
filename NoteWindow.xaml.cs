@@ -18,7 +18,7 @@ namespace HelloStickyNotes
             this.KeyDown += NoteWindow_KeyDown;
         }
 
-        private void NoteWindow_KeyDown(object sender, KeyEventArgs e)
+        private async void NoteWindow_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -26,61 +26,18 @@ namespace HelloStickyNotes
                     Window.GetWindow(this)?.Close();
                     break;
                 case Key.Tab:
-                    string result = NoteCommands.OnCommit(InputView.Text, this);
-                    if (result != null)
+                    try
                     {
-                        InputView.Text = result;
+                        string result = await NoteCommands.OnCommit(InputView.Text, this);
+                        if (result != null)
+                        {
+                            InputView.Text = result;
+                        }
                     }
-                    /*switch (InputView.Text)
+                    catch (Exception ex)
                     {
-                        case "pwd":
-                            String pwd = RandomUtils.RandomLABCode4("2026-06-02");
-                            String pwd1 = RandomUtils.RandomLABCode4(DateTime.Now);
-                            String pwd2 = RandomUtils.RandomLABCode4("2026-06-03");
-                            String pwd3 = RandomUtils.RandomLABCode4("2026-06-04");
-                            String pwd4 = RandomUtils.RandomLABCode4("2026-06-05");
-                            String pwd5 = RandomUtils.RandomLABCode4("2026-06-23");
-                            String str = "" + pwd + "\n" + pwd2 + "\n" + pwd3 + "\n" + pwd4 + "\n" + pwd5 + "\nsame as pwdNow: "+ pwd1;
-                            InputView.Text = str;
-                            break;
-                        case "dayOfYear":
-                            int i = DateTime.Now.DayOfYear;
-                            InputView.Text = "DayOfYear: "+ i;
-                            break;
-                        case "day":
-                            int day = DateTime.Now.Day;
-                            InputView.Text = "Day: " + day;
-                            break;
-                        case "dayOfWeek":
-                            string dayOfWeek = DateTime.Now.DayOfWeek.ToString();
-                            InputView.Text = "DayOfWeek: " + dayOfWeek;
-                            break;
-                        case "year":
-                            int year = DateTime.Now.Year;
-                            InputView.Text = "Years: " + year;
-                            break;
-                        case "close":
-                            Window.GetWindow(this)?.Close();
-                            break;
-                        case "alwaysOnTop":
-                        case "top":
-                            this.Topmost = !this.Topmost;
-                            break;
-                        case "savePath":
-                            InputView.Text = new MyStorage("notes.json").GetPath();
-                            break;
-                        case "save":
-                            InputView.Text = "Save Failed";
-                            if (Application.Current.MainWindow is MainWindow mainView && mainView is MainWindow mainWindow)
-                            {
-                                if (mainWindow.DataContext is MainViewModel viewModel)
-                                {
-                                    viewModel.SaveNotes();
-                                    InputView.Text = "已尝试进行保存";
-                                }
-                            }
-                            break;
-                    }*/
+                        InputView.Text = "出错了，请检查输入是否正确";//ex.ToString();
+                    }
                     break;
             }
         }

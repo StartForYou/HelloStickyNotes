@@ -28,9 +28,11 @@ namespace HelloStickyNotes.ViewModels
 
         [ObservableProperty]
         private string _debugText = "";
+        private int tick = 0;
 
         private bool isContentChanged = false;
         private NoteItemViewModel lastRightClickNote = null;
+        private List<NoticeBean> noticeItems = new List<NoticeBean>();
 
         public ObservableCollection<NoteItemViewModel> NoteList { get; set; } = new ObservableCollection<NoteItemViewModel>();
 
@@ -110,6 +112,16 @@ namespace HelloStickyNotes.ViewModels
             return lastRightClickNote;
         }
 
+        public bool NeedNotice()
+        {
+            return noticeItems.Count() > 0;
+        }
+
+        public List<NoticeBean> GetNoticeItems()
+        {
+            return noticeItems;
+        }
+
         [RelayCommand]
         public void CloseAllWindows()
         {
@@ -135,6 +147,7 @@ namespace HelloStickyNotes.ViewModels
 
         public void Tick()
         {
+            tick++;
             foreach (var noteModel in NoteList) 
             {
                 noteModel.Tick();
@@ -142,16 +155,24 @@ namespace HelloStickyNotes.ViewModels
                 {
                     isContentChanged = true;
                 }
+                if (noteModel.NoticeTitle!= null)
+                {
+                    noticeItems.Add(new NoticeBean(noteModel.NoticeTitle, noteModel.Model));
+                    noteModel.NoticeTitle = null;
+                }
             }
-            if (isContentChanged)
+            if (tick % 5== 0)
             {
-                SaveNotes();
-                DebugText = "已自动保存便签数据";
-                isContentChanged = false;
-            }
-            if (!DebugText.EndsWith(")"))
-            {
-                DebugText += " (" + DateTime.Now.ToString() + ")";
+                if (isContentChanged)
+                {
+                    SaveNotes();
+                    DebugText = "已自动保存便签数据";
+                    isContentChanged = false;
+                }
+                if (!DebugText.EndsWith(")"))
+                {
+                    DebugText += " (" + DateTime.Now.ToString() + ")";
+                }
             }
         }
 
