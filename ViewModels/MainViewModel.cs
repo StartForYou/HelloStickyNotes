@@ -30,7 +30,7 @@ namespace HelloStickyNotes.ViewModels
         private string _debugText = "";
         private int tick = 0;
 
-        private bool isContentChanged = false;
+        private bool isRequireToSave = false;
         private NoteItemViewModel lastRightClickNote = null;
         private List<NoticeBean> noticeItems = new List<NoticeBean>();
 
@@ -79,7 +79,7 @@ namespace HelloStickyNotes.ViewModels
             noteWindow.Show();
             
             DebugText = "已尝试添加新的便签! 现在已有"+ count+ "个";
-            isContentChanged = true;
+            isRequireToSave = true;
         }
 
         public void RemoveNote(NoteItemViewModel noteViewModel)
@@ -99,7 +99,7 @@ namespace HelloStickyNotes.ViewModels
             }
             //DebugText = "已尝试添加新的便签! 现在已有" + count + "个";
             DebugText = "已尝试删除便签: " + (noteItem.Title != null ? noteItem.Title : "无标题");
-            isContentChanged = true;
+            isRequireToSave = true;
         }
 
         public void SetLastRightClickNote(NoteItemViewModel noteViewModel)
@@ -115,6 +115,16 @@ namespace HelloStickyNotes.ViewModels
         public bool NeedNotice()
         {
             return noticeItems.Count() > 0;
+        }
+
+        public void SetRequireToSave(bool requireToSave = true)
+        {
+            isRequireToSave = requireToSave;
+        }
+
+        public bool IsRequireToSave()
+        {
+            return isRequireToSave;
         }
 
         public List<NoticeBean> GetNoticeItems()
@@ -153,7 +163,7 @@ namespace HelloStickyNotes.ViewModels
                 noteModel.Tick();
                 if (noteModel.IsContentChanged())
                 {
-                    isContentChanged = true;
+                    isRequireToSave = true;
                 }
                 if (noteModel.NoticeTitle!= null)
                 {
@@ -163,11 +173,11 @@ namespace HelloStickyNotes.ViewModels
             }
             if (tick % 5== 0)
             {
-                if (isContentChanged)
+                if (isRequireToSave)
                 {
                     SaveNotes();
                     DebugText = "已自动保存便签数据";
-                    isContentChanged = false;
+                    isRequireToSave = false;
                 }
                 if (!DebugText.EndsWith(")"))
                 {

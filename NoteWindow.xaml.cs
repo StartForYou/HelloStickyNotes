@@ -1,4 +1,5 @@
 ﻿using HelloStickyNotes.Misc;
+using HelloStickyNotes.Models;
 using HelloStickyNotes.Utils;
 using HelloStickyNotes.ViewModels;
 using System;
@@ -12,10 +13,22 @@ namespace HelloStickyNotes
     /// </summary>
     public partial class NoteWindow : Window
     {
+
+        private long _activeTime = 0L;
+
         public NoteWindow()
         {
             InitializeComponent();
             this.KeyDown += NoteWindow_KeyDown;
+            this.Activated += NoteWindow_Activated;
+        }
+
+        
+
+        private void NoteWindow_Activated(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+            _activeTime = DateTime.Now.Ticks;
         }
 
         private async void NoteWindow_KeyDown(object sender, KeyEventArgs e)
@@ -23,7 +36,14 @@ namespace HelloStickyNotes
             switch (e.Key)
             {
                 case Key.Escape:
-                    Window.GetWindow(this)?.Close();
+                    if (FocusManager.GetFocusedElement(this) != null/* && _active*/)
+                    {
+                        // 窗口获得了焦点
+                        if ((DateTime.Now.Ticks - _activeTime)/ 10000 > 100)
+                        {
+                            Window.GetWindow(this)?.Close();
+                        }
+                    }
                     break;
                 case Key.Tab:
                     try
@@ -34,9 +54,16 @@ namespace HelloStickyNotes
                             InputView.Text = result;
                         }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         InputView.Text = "出错了，请检查输入是否正确";//ex.ToString();
+                        /*if (Application.Current.MainWindow is MainWindow mainView && mainView is MainWindow mainWindow)
+                        {
+                            if (mainWindow.DataContext is MainViewModel viewModel)
+                            {
+                                viewModel.NoteList.Add(new NoteItemViewModel(new NoteItem("err", ex.ToString())));
+                            }
+                        }*/
                     }
                     break;
             }

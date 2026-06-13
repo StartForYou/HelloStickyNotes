@@ -1,5 +1,9 @@
 ﻿using Hardcodet.Wpf.TaskbarNotification;
+using HelloStickyNotes.Misc;
+using HelloStickyNotes.Misc.Winds;
+using HelloStickyNotes.Models;
 using HelloStickyNotes.ViewModels;
+using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel;
 using System.Windows;
@@ -19,6 +23,7 @@ namespace HelloStickyNotes
 
         private bool isExiting = false;
         private bool tipMininuzedToTray = false;
+        private AppSettings appSettings = null;
 
         //private const string MutexName = "Global\\MyAppMutex"; // 确保这个名称是唯一的就行
         //private Mutex mutex;
@@ -31,9 +36,24 @@ namespace HelloStickyNotes
             this.mTimer.Tick += MTimer_Tick;
             this.mTimer.Start();
 
+            this.appSettings = AppSettings.Get();
+            if (appSettings != null)
+            {
+                if (appSettings.Width > 0) 
+                {
+                    Width = (Double)appSettings.Width;
+                }
+                if (appSettings.Height > 0) 
+                {
+                    Height = (Double)appSettings.Height;
+                }
+                //TrayIcon.ShowBalloonTip("提示", "W, H: "+ appSettings.Width + " "+ appSettings.Height, BalloonIcon.None);
+
+            }
             this.Closing += OnClosing;
 
         }
+
 
         private void MTimer_Tick(object sender, EventArgs e)
         {
@@ -43,6 +63,12 @@ namespace HelloStickyNotes
                 foreach (var item in this.mViewModel.GetNoticeItems())
                 {
                     TrayIcon.ShowBalloonTip(item.NoticeTitle, item.NoteItem.Title, BalloonIcon.None);
+                    if (item.NoteItem.ShowNoticeWindow)
+                    {
+                        PopNoticeWindow popNoticeWindow = new PopNoticeWindow();
+                        popNoticeWindow.SetNoteItem(item.NoteItem);
+                        popNoticeWindow.Show();
+                    }
                 }
                 this.mViewModel.GetNoticeItems().Clear();
             }
@@ -134,6 +160,18 @@ namespace HelloStickyNotes
                 (window as Window).Close();
             }
             Application.Current.Shutdown();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            if (Visibility.Visible == (Visibility)this.GetValue(UIElement.VisibilityProperty))
+            {
+                appSettings.Width = (int)Width;
+                appSettings.Height = (int)Height;
+            }
+            new MyStorage(AppSettings.FILE_NAME).Save(appSettings);
+            //TrayIcon.ShowBalloonTip("提示", "应用程序已关闭", BalloonIcon.None); // 可用
+            //base.OnClosed(e);
         }
     }
 }

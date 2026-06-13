@@ -175,27 +175,6 @@
                 </BeginStoryboard>
             </EventTrigger>
         </Style.Triggers>
-
-        <!--<Setter Property="Tel">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border x:Name="Border" 
-                    Background="{TemplateBinding Background}" 
-                    CornerRadius="4">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Border" Property="Background" Value="{StaticResource OverlayLightBrush}"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="Border" Property="BorderThickness" Value="1"/>
-                            <Setter TargetName="Border" Property="BorderBrush" Value="DarkGray"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>-->
     </Style>
 
     

@@ -3,11 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" >
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:HelloStickyNotes">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
 
     <Grid>
 
-        <ScrollViewer VerticalScrollBarVisibility="Visible" Style="{StaticResource ModernScrollViewer}">
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Style="{StaticResource ModernScrollViewer}" x:Name="ScrollView">
             <ItemsControl ItemsSource="{Binding NoteList}">
 
                 <!--setting layout view-->
@@ -24,14 +31,15 @@
                             MouseDown="Border_MouseDown" MouseUp="Border_MouseUp">
                             <StackPanel>
                                 <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
-                                Background="Transparent"
-                                BorderThickness="0"
-                                FontWeight="SemiBold"
-                                FontSize="14"/>
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    FontWeight="SemiBold"
+                                    FontSize="14"
+                                    MaxLength="24"/>
                                 <Border Background="Gray" Margin="0, 2" Height="1"/>
                                 <TextBlock Text="{Binding Content}"
-                                FontSize="14"
-                                TextWrapping="Wrap"/>
+                                    FontSize="14"
+                                    TextWrapping="Wrap"/>
                                 <!--FontFamily="Consolas"-->
                                 <!--<RepeatButton Content="openNote" Command="{Binding ItemClickCommand}"></RepeatButton>-->
                             </StackPanel>
@@ -55,6 +63,8 @@
         <Popup x:Name="myPopup" Placement="MousePoint" StaysOpen="False" AllowsTransparency="True" PopupAnimation="Fade">
             <Border Style="{StaticResource PopupBorder}">
                 <StackPanel Width="120" Margin="0, 8">
+                    <Button Content="清除行为" Style="{StaticResource PopupButton}" Click="PopupClearAction_Click" Name="ClearActionButton"/>
+                    <!--{Binding ActionVisible, Converter={StaticResource BoolToVisibility} 可用-->
                     <Button Content="删除" Style="{StaticResource PopupButton}" Click="PopupDelete_Click"/>
                     <Button Content="取消" Style="{StaticResource PopupButton}" Click="PopupCancel_Click"/>
                 </StackPanel>

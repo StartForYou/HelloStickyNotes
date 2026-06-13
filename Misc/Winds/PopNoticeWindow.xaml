@@ -1,0 +1,19 @@
+﻿<Window x:Class="HelloStickyNotes.Misc.Winds.PopNoticeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloStickyNotes.Misc.Winds"
+        mc:Ignorable="d"
+        Title="提醒界面" Height="450" Width="800"
+        WindowStyle="None"
+        WindowState="Maximized"
+        Background="#393939">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="800">
+            <TextBlock Text="TitleTitleTitle" Name="mTitle" Foreground="Wheat" FontSize="35" Margin="8" HorizontalAlignment="Center"/>
+            <TextBlock Text="MessageMessageMessageMessage" Name="mMessage" Foreground="LightGray" FontSize="21" Margin="40,0" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+            <Button Style="{StaticResource ThemeButton}" Content="关闭界面" Name="mBackButton" Foreground="White" FontSize="22" Height="44" Margin="0, 20, 0, 0" Click="mBackButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

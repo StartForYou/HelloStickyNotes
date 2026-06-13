@@ -5,34 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloStickyNotes"
         mc:Ignorable="d"
-        Title="NoteWindow" Height="160" Width="240"
+        Title="NoteWindow" Height="120" Width="180"
         WindowStyle="None"
         ShowInTaskbar="False"
         ResizeMode="CanResize"
         AllowsTransparency="True"
         Background="Transparent"
-        MinWidth="80" MinHeight="52"
-        MaxWidth="1080" MaxHeight="720">
+        MinWidth="80" MinHeight="46"
+        MaxHeight="1080"
+        Topmost="{Binding Topmost, Mode=OneWay}">
+    <!--MaxWidth="1080"-->
 
     <WindowChrome.WindowChrome>
         <WindowChrome CornerRadius="0" GlassFrameThickness="1" CaptionHeight="0" ResizeBorderThickness="6"/>
     </WindowChrome.WindowChrome>
 
     <!--ShowInTaskbar="False" 不显示在底部导航栏-->
-    <Border CornerRadius="14"
-        Background="Bisque" 
-        Padding="16"
+    <Border CornerRadius="4"
+        Background="{Binding BackgroundColor}"
+        Padding="12"
         BorderThickness="1"
-        BorderBrush="Black"
+        BorderBrush="#402000"
         MouseLeftButtonDown="DragWindow">
 
         <TextBox Name="InputView" 
                  Height="Auto"
                  Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}"
                  Background="Transparent" 
+                 Foreground="{Binding TextColor}"
                  TextWrapping="Wrap"
                  BorderThickness="0.0"
                  AcceptsReturn="True"
+                 FontSize="16"
                  />
 
     </Border>

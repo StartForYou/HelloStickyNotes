@@ -1,7 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HelloStickyNotes.Models;
+using HelloStickyNotes.Utils;
 using System;
+using System.Drawing;
+using System.Windows;
 using System.Windows.Input;
 
 namespace HelloStickyNotes.ViewModels
@@ -12,7 +15,6 @@ namespace HelloStickyNotes.ViewModels
         private long lastDownTime = 0;
 
         private bool isChanged = false;
-        private int waitSeconds = 0;
         private string noticeTitle = null;
 
         public string Id { get => Model.Id; }
@@ -55,7 +57,7 @@ namespace HelloStickyNotes.ViewModels
             }
         }
 
-        public int WaitSeconds
+        /*public int WaitSeconds
         {
             get => waitSeconds;
             set
@@ -66,12 +68,86 @@ namespace HelloStickyNotes.ViewModels
                     OnPropertyChanged();
                 }
             }
+        }*/
+
+        public string BackgroundColor
+        {
+            get
+            {
+                // Color To String: ColorTranslator.ToHtml(Color.Red)
+                return ToColor(Model.Color, System.Drawing.Color.Bisque); //"#808080";
+            }
+            set
+            {
+                if (Model.Color != value)
+                {
+                    Model.Color = value;
+                    NoteChanged();
+                    OnPropertyChanged();
+                }
+            }
+        }
+        
+        public string TextColor
+        {
+            get
+            {
+                return ToColor(Model.TextColor, Color.Black);
+            }
+            set
+            {
+                if (Model.TextColor != value)
+                {
+                    Model.TextColor = value;
+                    NoteChanged();
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string ToColor(string oldColor, Color defaultColor)
+        {
+            if (oldColor == "")
+            {
+                return ColorTranslator.ToHtml(defaultColor);
+            }
+            else if (oldColor.StartsWith("#"))
+            {
+                return oldColor;
+            }
+            else
+            {
+                try
+                {
+                    ColorTranslator.FromHtml(oldColor);
+                    return oldColor;
+                }
+                catch (Exception)
+                {
+                    return ColorTranslator.ToHtml(defaultColor);
+                }
+            }
         }
 
         public string NoticeTitle
         {
             get => noticeTitle;
             set => noticeTitle = value;
+        }
+
+        public bool ActionVisible
+        {
+            get 
+            {
+                if (Model.Action == NoteAction.NULL)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
 
         // 主窗口中item按下时
@@ -118,24 +194,57 @@ namespace HelloStickyNotes.ViewModels
 
         public void Tick()
         {
-            if (WaitSeconds> 0)
+            if (Model.NeedUpdate)
             {
-                WaitSeconds--;
-                if (WaitSeconds <= 0)
+                isChanged = true;
+                Model.NeedUpdate = false;
+            }
+            if (Model.Action != NoteAction.NULL)
+            {
+                switch (Model.Action)
                 {
-                    NoticeTitle = "倒计时结束";
-                }
-                Content = "剩余时间: " + (WaitSeconds / 60) + ":";
-                int second = WaitSeconds % 60;
-                if (second< 10)
-                {
-                    Content += "0"+ second;
-                }
-                else
-                {
-                    Content += second.ToString();
+                    case NoteAction.CLOCK:
+                        if (Model.StartTime > 0)
+                        {
+                            if (DateTime.Now.Ticks > Model.StartTime)
+                            {
+                                NoticeTitle = "闹钟";
+                                Content = Title + " " + DateTime.Now.ToShortDateString() + " "+ DateTime.Now.ToShortTimeString() + " - 闹钟铃响！";
+                                Model.StartTime = 0;
+                                BackgroundColor = "#802010";
+                                TextColor = "#FFFFFF";
+                            }
+                            else
+                            {  
+                                int remainingTime = (int)((Model.StartTime - DateTime.Now.Ticks) / 10000 / 1000);
+                                string remainingText = DateTimeUtils.GetRemainingTime(remainingTime);
+                                Content = Title + " - 闹钟将在" + remainingText + "后响铃" ;
+                            }
+                        }
+                        break;
+                    case NoteAction.TIME:
+                        Content = "当前时间: " + DateTime.Now.ToShortTimeString();
+                        break;
+                    case NoteAction.COUNTDOWN:
+                        if (Model.StartTime > 0)
+                        {
+                            int lessTime = Model.Seconds - (int) ((DateTime.Now.Ticks - Model.StartTime)/ 10000/ 1000);
+                            if (lessTime <= 0)
+                            {
+                                NoticeTitle = "倒计时结束";
+                                Content = Title + " - 倒计时结束";
+                                Model.StartTime = 0;
+                            }
+                            else
+                            {
+                                string countdownText = DateTimeUtils.GetRemainingTime(lessTime);//minutes + ":" + secondsText
+                                Content = Title + "倒计时: " + countdownText;
+                            }
+                        }
+                        break;
                 }
             }
+            
             //OnPropertyChanged(Content);
         }
 

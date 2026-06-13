@@ -45,9 +45,22 @@ namespace HelloStickyNotes.Misc
             File.WriteAllText(GetPath(), saveContent);
         }
 
+        public void Save<T>(T saveContent)
+        {
+            Save(JsonSerializer.Serialize<T>(saveContent));
+        }
+
         public void Save<T>(IEnumerable<T> items)
         {
             Save(JsonSerializer.Serialize(items, new JsonSerializerOptions { WriteIndented = true }));
+            //Directory.CreateDirectory(Path.GetDirectoryName(_path)!);
+            //File.WriteAllText(_path, JsonSerializer.Serialize(items, new JsonSerializerOptions { WriteIndented = true }));
+        }
+
+        public T Read<T>()
+        {
+            if (!File.Exists(GetPath())) return default;
+            return JsonSerializer.Deserialize<T>(File.ReadAllText(GetPath()));
             //Directory.CreateDirectory(Path.GetDirectoryName(_path)!);
             //File.WriteAllText(_path, JsonSerializer.Serialize(items, new JsonSerializerOptions { WriteIndented = true }));
         }

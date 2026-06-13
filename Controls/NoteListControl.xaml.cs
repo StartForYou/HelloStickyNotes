@@ -1,4 +1,5 @@
-﻿using HelloStickyNotes.ViewModels;
+﻿using HelloStickyNotes.Models;
+using HelloStickyNotes.ViewModels;
 using Microsoft.Win32;
 using System;
 using System.Windows;
@@ -18,6 +19,7 @@ namespace HelloStickyNotes.Controls
         public NoteListControl()
         {
             InitializeComponent();
+            //ScrollView.Set
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -38,8 +40,9 @@ namespace HelloStickyNotes.Controls
                 if (e.ChangedButton == MouseButton.Left)
                 {
                     // 左键点击
-                    Border self = (sender as Border);
-                    if (self.DataContext != null && self.DataContext is NoteItemViewModel selfModel)
+                    //Border self = (sender as Border);
+                    NoteItemViewModel selfModel = GetSelfModel(sender as FrameworkElement);
+                    if (selfModel != null)
                     {
                         if (selfModel.CanNoteItemClick())
                         {
@@ -112,7 +115,9 @@ namespace HelloStickyNotes.Controls
                 mainViewModel?.RemoveNote(item);*/
                 MainViewModel mainViewModel = GetMainViewModel();
                 mainViewModel?.SetLastRightClickNote(item);
+                ClearActionButton.Visibility = item.ActionVisible ? Visibility.Visible : Visibility.Collapsed;
                 myPopup.IsOpen = true;
+                //myPopup.find
             }
             catch (Exception ex)
             {
@@ -131,6 +136,43 @@ namespace HelloStickyNotes.Controls
                 }
             }
             return null;
+        }
+
+        private NoteItemViewModel GetSelfModel(FrameworkElement sender)
+        {
+            if (sender.DataContext != null && sender.DataContext is NoteItemViewModel selfModel)
+            {
+                return selfModel;
+            }
+            return null;
+        }
+
+        private void PopupClearAction_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel mainViewModel = GetMainViewModel();
+            if (mainViewModel != null)
+            {
+                try
+                {
+                    myPopup.IsOpen = false;
+                    NoteItemViewModel selfModel = mainViewModel.GetLastRightClickNote();//GetSelfModel(sender as FrameworkElement);
+                    if (selfModel != null)
+                    {
+                        selfModel.Model.Action = NoteAction.NULL;
+                    }
+                    string tip = "已尝试清除" + selfModel.Title + "的行为";
+                    mainViewModel.DebugText = tip;
+                    mainViewModel.SetRequireToSave();
+                }
+                catch (Exception ex)
+                {
+                    MainViewModel mainViewModel1 = GetMainViewModel();
+                    NoteItem model = new NoteItem("报错日志", ex.ToString());
+                    NoteItemViewModel viewModel = new NoteItemViewModel(model);
+                    mainViewModel1.NoteList.Add(viewModel);
+                    //mainViewModel1.NewNote();//DebugText = ex.ToString();
+                }
+            }
         }
 
         private void PopupDelete_Click(object sender, RoutedEventArgs e)
